@@ -1,0 +1,6 @@
+# Production-only repository allowlist.
+# Local source documents, working files, audits, and development materials stay untracked.
+/*
+!/.gitignore
+!/docs/
+!/docs/**

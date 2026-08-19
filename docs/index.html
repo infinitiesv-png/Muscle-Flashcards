@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Muscle Flashcards</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MUSCLE ANATOMY · V1</p>
+        <h1>Identify the muscle</h1>
+      </div>
+      <p class="progress" id="progress" aria-live="polite"></p>
+    </header>
+
+    <button class="card" id="card" type="button" aria-label="Flip flashcard" aria-pressed="false">
+      <span class="card-inner">
+        <span class="card-face card-front">
+          <img id="muscle-image" alt="Source anatomy illustration">
+          <span class="image-pending" id="image-pending" hidden>Image pending</span>
+          <span class="flip-hint">Click to reveal</span>
+        </span>
+        <span class="card-face card-back">
+          <span class="back-scroll">
+            <span class="identity">
+              <span class="name-zh" id="name-zh"></span>
+              <span class="english-line">
+                <span class="name-en" id="name-en"></span>
+                <span class="audio-button" id="speak" role="button" tabindex="0" aria-label="Play English pronunciation">▶</span>
+              </span>
+              <span class="pronunciation" id="pronunciation"></span>
+            </span>
+            <span class="facts" id="facts"></span>
+            <span class="source-note" id="source-note"></span>
+          </span>
+        </span>
+      </span>
+    </button>
+
+    <nav class="navigation" aria-label="Flashcard navigation">
+      <button id="previous" type="button">← Previous</button>
+      <button id="shuffle" type="button">Shuffle</button>
+      <button id="next" type="button">Next →</button>
+    </nav>
+
+    <section class="feedback" aria-label="Study feedback">
+      <button class="review" id="review" type="button">Review again</button>
+      <button class="know" id="know" type="button">Know it</button>
+    </section>
+    <p class="status" id="status" aria-live="polite">Flip the card when you have an answer.</p>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
